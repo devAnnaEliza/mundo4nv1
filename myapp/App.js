@@ -1,48 +1,30 @@
-import React, { useState } from 'react';
-import { ScrollView, View, Pressable, Text, StyleSheet } from 'react-native';
-import Cadastro from 'C:\Users\PC\Documents\GitHub\mundo4nv1\myapp\Cadastro.js';
-import Listagem from 'C:\Users\PC\Documents\GitHub\mundo4nv1\myapp\Listagem.js';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import 'react-native-gesture-handler';
+import { Dados } from 'myapp/dados.js'; 
+import FormularioFornecedor from 'myapp/src/funcoes/cadfornecedor.js'; 
+import ListaFornecedores from 'myapp/src/funcoes/listafornecedores.js';
+import TelaInicial from 'myapp/Home.js';
 
-const App = () => {
-  const [currentPage, setCurrentPage] = useState('cadastro');
-  const [fornecedores, setFornecedores] = useState([]);
+const Stack = createStackNavigator();
 
-  const handlePress = (page) => setCurrentPage(page);
-
-  const renderPage = () => {
-    switch (currentPage) {
-      case 'cadastro':
-        return <Cadastro onCadastro={(novoFornecedor) => {
-          setFornecedores([...fornecedores, novoFornecedor]);
-          setCurrentPage('listagem');
-        }} />;
-      case 'listagem':
-        return <Listagem fornecedores={fornecedores} />;
-      default:
-        return null;
-    }
-  };
-
-  return (
-    <ScrollView style={styles.scrollView}>
-      <View style={styles.container}>
-        <Pressable onPress={() => handlePress('cadastro')} style={styles.button}>
-          <Text style={styles.buttonText}>Cadastro</Text>
-        </Pressable>
-        <Pressable onPress={() => handlePress('listagem')} style={styles.button}>
-          <Text style={styles.buttonText}>Listagem</Text>
-        </Pressable>
-      </View>
-      {renderPage()}
-    </ScrollView>
-  );
+const screenOptions = {
+  headerStyle: { backgroundColor: '#fff' },
+  headerTintColor: '#333',
+  headerTitleStyle: { fontWeight: 'bold', textAlign: 'center' },
 };
 
-const styles = StyleSheet.create({
-  scrollView: { backgroundColor: 'black' },
-  container: { flex: 1, justifyContent: 'center', width: '90%', alignSelf: 'center', paddingTop: 100, paddingBottom: 20 },
-  button: { padding: 8, margin: 5, elevation: 3, backgroundColor: '#000000', borderWidth: 2, borderColor: '#00ff00', borderRadius: 10 },
-  buttonText: { color: '#ffffff', fontWeight: 'bold', textAlign: 'center', fontSize: 20, letterSpacing: 0.25 },
-});
+const App = () => (
+  <Dados>  
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={screenOptions}>
+        <Stack.Screen name="Home" component={TelaInicial} options={{ title: 'Meeting App' }} />
+        <Stack.Screen name="Formulário de cadastro do Fornecedor" component={FormularioFornecedor} options={{ title: 'Cadastro de Fornecedores' }} />
+        <Stack.Screen name="Lista de Fornecedores" component={ListaFornecedores} options={{ title: 'Lista de Fornecedores' }} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  </Dados>
+);
 
-export default App; 
+export default App;
