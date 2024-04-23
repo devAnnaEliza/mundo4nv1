@@ -1,4 +1,4 @@
-/**código reducers */
+/**código add, edt exc */
 const fornecedoresReducer = (state = [], action) => {
     switch (action.type) {
       case 'ADICIONAR_FORNECEDOR':

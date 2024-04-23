@@ -1,7 +1,7 @@
 /**add fornecedor*/ 
 import React, { useState, useEffect } from "react";
 import { StyleSheet, TextInput, Text, Button, View, Image, Alert, ScrollView } from "react-native";
-import { useFornecedores } from '../dados/DadosFornecedor';
+import { useFornecedores } from 'myapp/dados.js';
 import { useNavigation, useRoute } from "@react-navigation/native";
 import * as ImagePicker from 'expo-image-picker';
 import * as FileSystem from 'expo-file-system';
@@ -84,9 +84,9 @@ const FormularioFornecedor = () => {
 
 const styles = StyleSheet.create({
     imagem: { width: 150, height: 150, marginBottom: 10, alignSelf: 'center' },
-    texto: { paddingBottom: 5, fontSize: 18, fontWeight: 'bold', color: '#333' },
-    container: { flex: 1, padding: 10, backgroundColor: '#f5f5f5' },
-    input: { borderWidth: 1, borderColor: '#ccc', borderRadius: 8, padding: 10, marginBottom: 2, backgroundColor: '#fff', fontSize: 16, shadowColor: "#000", shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.1, shadowRadius: 1.41, elevation: 2 },
+    texto: { paddingBottom: 5, fontSize: 18, fontWeight: 'bold', color: '#000000' },
+    container: { flex: 1, padding: 10, backgroundColor: '#C0D9AF' },
+    input: { borderWidth: 1, borderColor: '#ccc', borderRadius: 8, padding: 10, marginBottom: 2, backgroundColor: '#FFFFFF', fontSize: 16, shadowColor: "#000", shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.1, shadowRadius: 1.41, elevation: 2 },
 });
 
 export default FormularioFornecedor;

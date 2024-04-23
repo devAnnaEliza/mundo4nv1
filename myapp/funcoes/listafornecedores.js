@@ -1,7 +1,7 @@
 /**lista fornecedores*/ 
 import React, { useState } from 'react';
 import { View, Text, TextInput, FlatList, StyleSheet, Image, TouchableOpacity, Alert } from 'react-native';
-import { useFornecedores } from 'C:/Users/PC/Documents/GitHub/mundo4nv1/myapp/dados'
+import { useFornecedores } from 'myapp/dados.js'
 import { useNavigation } from '@react-navigation/native';
 
 const ListaFornecedores = () => {

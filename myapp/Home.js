@@ -2,7 +2,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
-const TelaInicial = ({ navigation }) => {
+const Home = ({ navigation }) => {
     // função pra ir pra tela de add fornecedor
     const navigateToAddFornecedor = () => {
         navigation.navigate('Cadastro do Fornecedor');
@@ -16,7 +16,7 @@ const TelaInicial = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View style={styles.logoContainer}>
-                <Image style={styles.logo} source={require('../assets/supplychain.png')} />
+                <Image style={styles.logo} source={require('.myapp/assets/logocad.png')} />
             </View>
             <Text style={styles.titulo}>Escolha uma opção:</Text>
             <TouchableOpacity
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'flex-start',
         alignItems: 'center',
-        backgroundColor: '#fff',
+        backgroundColor: '#C0D9AF',
         padding: 20,
     },
     logoContainer: {
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     textoBotao: {
-        color: '#fff',
+        color: '#C0D9AF',
         fontWeight: 'bold',
         fontSize: 20,
     },
