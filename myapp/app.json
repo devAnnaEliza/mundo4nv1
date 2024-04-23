@@ -4,10 +4,10 @@
     "slug": "myapp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "C:/Users/PC/Documents/GitHub/mundo4nv1/myapp/src/assets/icon.png",
+    "icon": "C:/Users/PC/Documents/GitHub/mundo4nv1/myapp/assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "C:/Users/PC/Documents/GitHub/mundo4nv1/myapp/src/assets/splash.png",
+      "image": "C:/Users/PC/Documents/GitHub/mundo4nv1/myapp/assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,12 +19,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "C:/Users/PC/Documents/GitHub/mundo4nv1/myapp/src/assets/adaptive-icon.png",
+        "foregroundImage": "C:/Users/PC/Documents/GitHub/mundo4nv1/myapp/assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       }
     },
     "web": {
-      "favicon": "C:/Users/PC/Documents/GitHub/mundo4nv1/myapp/src/assets/favicon.png"
+      "favicon": "C:/Users/PC/Documents/GitHub/mundo4nv1/myapp/assets/favicon.png"
     }
   }
 }

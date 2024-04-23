@@ -3,9 +3,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import 'react-native-gesture-handler';
 import { Dados } from 'myapp/dados.js'; 
-import FormularioFornecedor from 'myapp/src/funcoes/cadfornecedor.js'; 
-import ListaFornecedores from 'myapp/src/funcoes/listafornecedores.js';
-import TelaInicial from 'myapp/Home.js';
+import FormularioFornecedor from './myapp/funcoes/cadfornecedor.js'; 
+import ListaFornecedores from './myapp/funcoes/listafornecedores.js';
+import TelaInicial from './myapp/Home.js';
 
 const Stack = createStackNavigator();
 
@@ -13,7 +13,7 @@ const screenOptions = {
   headerStyle: { backgroundColor: '#fff' },
   headerTintColor: '#333',
   headerTitleStyle: { fontWeight: 'bold', textAlign: 'center' },
-};
+};a
 
 const App = () => (
   <Dados>  
