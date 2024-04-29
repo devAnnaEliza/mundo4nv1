@@ -13,7 +13,7 @@ const screenOptions = {
   headerStyle: { backgroundColor: '#C0D9AF' },
   headerTintColor: '#000000',
   headerTitleStyle: { fontWeight: 'bold', textAlign: 'center', color: '#000000' },
-};a
+};
 
 const App = () => (
   <Dados>  
